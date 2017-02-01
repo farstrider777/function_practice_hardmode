@@ -75,16 +75,37 @@ function findOddNumbers(input){
 // 5. Find words that contain `is`
 // ---------------------------
 
-
+function findWordsContainIs(input){
+	var whichElementsContainIs = [];
+	for(count = 0; count < input.length; count++){
+		if(input[count].includes("is")){
+			whichElementsContainIs.push(count)
+		}
+	}
+	return whichElementsContainIs
+}
 
 // ---------------------------
 // 5. Join Both Arrays Together
 // ---------------------------
 
 
-
+function joinArrays(a, b){
+	return a.concat(b);
+}
 
 // ---------------------------
 // 6. Use the Instructors array and find all that teach JavaScript,
 //    then sort them alphabetically
 // ---------------------------
+
+function findSort(){
+  var javascriptTeachers = []
+  for(count = 0; count < instructors.length; count++){
+	  if(instructors[count].teaches === "JavaScript"){
+		  javascriptTeachers.push(instructors[count].firstname)
+		  }
+	  }
+  javascriptTeachers.sort();
+  return javascriptTeachers;
+}
